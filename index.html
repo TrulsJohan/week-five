@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>::Grid::</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            height: 400px;
+            /*justify-items: stretch;*/
+            /*align-items: end;*/
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+            "header header header"
+            "sidebar maincontent maincontent"
+            "sidebar maincontent maincontent"
+            "footer footer content";
+            /*grid-template-rows: 120px 100px;*/
+            gap: 20px;
+            /*column-gap: 20px;*/
+            /*row-gap: 20px;*/
+            /*grid-template-rows: minmax(150px, auto);*/
+            /*grid-template-columns: minmax(150px, 100px);*/
+            /*grid-auto-rows: auto;*/
+            /*grid-template: row / columns;*/
+            /*grid-template: 100px 50px / 100px 50px;*/
+            /*grid-auto-flow: column;*/
+        }
+        .item {
+            border: 1px solid black;
+            background-color: whitesmoke;
+        }
+        .item1 {
+            /*word-break: break-all;*/
+            /*overflow: scroll;*/
+            grid-area: header;
+            /*grid-column-start: 2;*/
+            /*grid-column-end: 3;*/
+            /*grid-column: span 2;*/
+        }
+        .item2 {
+            grid-area: sidebar;
+        }
+        .item3 {
+            grid-area: content;
+        }
+        .item4 {
+            grid-area: maincontent;
+        }
+        .item5 {
+            grid-area: adverts;
+        }
+        .item6{
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- .item.item${$}*9   tab -->
+        <div class="item item1">header</div>
+        <div class="item item2">sidebar</div>
+        <div class="item item3">content</div>
+        <div class="item item4">maincontent</div>
+<!--        <div class="item item5">adverts</div>-->
+        <div class="item item6">footer</div>
+<!--        <div class="item item7">7</div>-->
+<!--        <div class="item item8">8</div>-->
+<!--        <div class="item item9">9</div>-->
+    </div>
+</body>
+
+</html>
